@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: false, // ❗ 關閉 Turbopack
+  // ✅ 這是乾淨、相容 Next.js 15 的設定
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: [],
   },
-  // 如果你有其他設定，保留即可
 };
 
 export default nextConfig;
