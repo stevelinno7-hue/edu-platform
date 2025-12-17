@@ -1,3 +1,4 @@
+// components/QuestionCard.tsx
 import Card from "@/components/Card";
 import Button from "@/components/Button";
 import type { Question } from "@/models/Question";
@@ -16,8 +17,16 @@ export default function QuestionCard({ question, onEdit, onDelete }: Props) {
       </div>
 
       <div className="flex gap-3">
-        {onEdit && <Button variant="muted" onClick={onEdit}>編輯</Button>}
-        {onDelete && <Button variant="danger" onClick={onDelete}>刪除</Button>}
+        {onEdit && (
+          <Button variant="muted" onClick={onEdit}>
+            編輯
+          </Button>
+        )}
+        {onDelete && (
+          <Button variant="danger" onClick={onDelete}>
+            刪除
+          </Button>
+        )}
       </div>
     </Card>
   );
