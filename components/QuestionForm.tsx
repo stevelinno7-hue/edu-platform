@@ -1,85 +1,67 @@
+// components/QuestionForm.tsx
 "use client";
 
-import { useState } from "react";
-import type { FormEvent } from "react";
+import { useState, useEffect } from "react";
+import type { Question } from "@/models/Question";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 
-interface QuestionFormProps {
-  initialData?: {
-    title: string;
-    options: string[];
-    answer: number;
-  };
-  onSubmit: (data: {
-    title: string;
-    options: string[];
-    answer: number;
-  }) => void;
+interface Props {
+  mode: "create" | "edit";
+  initialValue?: Question | null;
+  onSubmit: (data: { title: string }) => void;
+  onCancel?: () => void;
 }
 
 export default function QuestionForm({
-  initialData,
+  mode,
+  initialValue,
   onSubmit,
-}: QuestionFormProps) {
-  const [title, setTitle] = useState(initialData?.title || "");
-  const [options, setOptions] = useState(
-    initialData?.options || ["", "", "", ""]
-  );
-  const [answer, setAnswer] = useState(initialData?.answer ?? 0);
+  onCancel,
+}: Props) {
+  const [title, setTitle] = useState("");
 
-  const updateOption = (index: number, value: string) => {
-    const newOptions = [...options];
-    newOptions[index] = value;
-    setOptions(newOptions);
-  };
+  useEffect(() => {
+    if (initialValue) {
+      setTitle(initialValue.title);
+    } else {
+      setTitle("");
+    }
+  }, [initialValue]);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit({ title, options, answer });
+    if (!title.trim()) return;
+    onSubmit({ title: title.trim() });
   };
 
   return (
-    <Card className="max-w-2xl mx-auto">
-      <form className="space-y-6" onSubmit={handleSubmit}>
+    <Card className="p-4 space-y-4">
+      <h2 className="text-xl font-semibold">
+        {mode === "create" ? "新增題目" : "編輯題目"}
+      </h2>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="font-medium">題目內容</label>
+          <label className="block text-sm mb-1">題目標題</label>
           <input
-            className="w-full border rounded-base px-4 py-2 mt-2"
+            className="w-full border rounded px-3 py-2"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="請輸入題目"
+            placeholder="請輸入題目標題"
           />
         </div>
 
-        <div className="space-y-3">
-          <label className="font-medium">選項</label>
-          {options.map((opt, i) => (
-            <input
-              key={i}
-              className="w-full border rounded-base px-4 py-2"
-              value={opt}
-              onChange={(e) => updateOption(i, e.target.value)}
-              placeholder={`選項 ${i + 1}`}
-            />
-          ))}
+        <div className="flex gap-3 justify-end">
+          {onCancel && (
+            <Button type="button" variant="muted" onClick={onCancel}>
+              取消
+            </Button>
+          )}
+          <Button type="submit" variant="primary">
+            {mode === "create" ? "建立" : "儲存"}
+          </Button>
         </div>
-
-        <div>
-          <label className="font-medium">正確答案（選項編號）</label>
-          <input
-            type="number"
-            min="1"
-            max="4"
-            className="w-full border rounded-base px-4 py-2 mt-2"
-            value={answer + 1}
-            onChange={(e) => setAnswer(Number(e.target.value) - 1)}
-          />
-        </div>
-
-        <Button variant="primary" className="w-full">
-          儲存題目
-        </Button>
       </form>
     </Card>
   );
