@@ -1,0 +1,53 @@
+:root {
+    /* --- 淺色模式 (預設) --- */
+    --primary-color: #2563EB;
+    --primary-hover: #1D4ED8;
+    --primary-light: #EFF6FF;
+    
+    --success: #10B981;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    
+    --bg-body: #F3F4F6;
+    --bg-card: #FFFFFF;
+    --bg-input: #FFFFFF;
+    
+    --text-main: #111827;
+    --text-secondary: #6B7280;
+    --border-color: #E5E7EB;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- 深色模式 (Dark Mode) --- */
+[data-theme="dark"] {
+    --primary-color: #3B82F6;        /* 深色模式下，主色調亮一點 */
+    --primary-hover: #60A5FA;
+    --primary-light: #1E3A8A;        /* 深藍底 */
+    
+    --bg-body: #0F172A;              /* 極深藍灰 (Slate 900) */
+    --bg-card: #1E293B;              /* 深藍灰 (Slate 800) */
+    --bg-input: #334155;
+    
+    --text-main: #F1F5F9;            /* 幾近白 */
+    --text-secondary: #94A3B8;       /* 淺灰 */
+    --border-color: #334155;         /* 邊框變深 */
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

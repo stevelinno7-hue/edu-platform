@@ -1,0 +1,185 @@
+// ======================================================
+// ✅ 英文單字庫（加長版 120+）
+// 國中 + 高中常用字彙
+// ======================================================
+
+export const ENGLISH_WORDS = [
+  // ===== 動詞 Verbs =====
+  { word: 'study', pos: 'v.', meaning: '學習' },
+  { word: 'review', pos: 'v.', meaning: '複習' },
+  { word: 'practice', pos: 'v.', meaning: '練習' },
+  { word: 'improve', pos: 'v.', meaning: '改善、提升' },
+  { word: 'explain', pos: 'v.', meaning: '解釋' },
+  { word: 'describe', pos: 'v.', meaning: '描述' },
+  { word: 'compare', pos: 'v.', meaning: '比較' },
+  { word: 'discuss', pos: 'v.', meaning: '討論' },
+  { word: 'create', pos: 'v.', meaning: '創造' },
+  { word: 'develop', pos: 'v.', meaning: '發展' },
+  { word: 'achieve', pos: 'v.', meaning: '達成' },
+  { word: 'prefer', pos: 'v.', meaning: '偏好' },
+  { word: 'consider', pos: 'v.', meaning: '考慮' },
+  { word: 'suggest', pos: 'v.', meaning: '建議' },
+  { word: 'support', pos: 'v.', meaning: '支持' },
+  { word: 'avoid', pos: 'v.', meaning: '避免' },
+  { word: 'include', pos: 'v.', meaning: '包含' },
+  { word: 'require', pos: 'v.', meaning: '需要、要求' },
+  { word: 'provide', pos: 'v.', meaning: '提供' },
+  { word: 'receive', pos: 'v.', meaning: '收到' },
+
+  // ===== 名詞 Nouns =====
+  { word: 'future', pos: 'n.', meaning: '未來' },
+  { word: 'library', pos: 'n.', meaning: '圖書館' },
+  { word: 'habit', pos: 'n.', meaning: '習慣' },
+  { word: 'ability', pos: 'n.', meaning: '能力' },
+  { word: 'experience', pos: 'n.', meaning: '經驗' },
+  { word: 'knowledge', pos: 'n.', meaning: '知識' },
+  { word: 'effort', pos: 'n.', meaning: '努力' },
+  { word: 'challenge', pos: 'n.', meaning: '挑戰' },
+  { word: 'solution', pos: 'n.', meaning: '解決方法' },
+  { word: 'opinion', pos: 'n.', meaning: '意見' },
+  { word: 'reason', pos: 'n.', meaning: '理由' },
+  { word: 'purpose', pos: 'n.', meaning: '目的' },
+  { word: 'advantage', pos: 'n.', meaning: '優點' },
+  { word: 'disadvantage', pos: 'n.', meaning: '缺點' },
+  { word: 'environment', pos: 'n.', meaning: '環境' },
+  { word: 'technology', pos: 'n.', meaning: '科技' },
+  { word: 'education', pos: 'n.', meaning: '教育' },
+  { word: 'subject', pos: 'n.', meaning: '科目' },
+  { word: 'material', pos: 'n.', meaning: '教材、材料' },
+
+  // ===== 形容詞 Adjectives =====
+  { word: 'important', pos: 'adj.', meaning: '重要的' },
+  { word: 'necessary', pos: 'adj.', meaning: '必要的' },
+  { word: 'possible', pos: 'adj.', meaning: '可能的' },
+  { word: 'different', pos: 'adj.', meaning: '不同的' },
+  { word: 'similar', pos: 'adj.', meaning: '相似的' },
+  { word: 'useful', pos: 'adj.', meaning: '有用的' },
+  { word: 'careful', pos: 'adj.', meaning: '小心的' },
+  { word: 'successful', pos: 'adj.', meaning: '成功的' },
+  { word: 'creative', pos: 'adj.', meaning: '有創意的' },
+  { word: 'confident', pos: 'adj.', meaning: '有自信的' },
+  { word: 'comfortable', pos: 'adj.', meaning: '舒服的' },
+  { word: 'traditional', pos: 'adj.', meaning: '傳統的' },
+  { word: 'modern', pos: 'adj.', meaning: '現代的' },
+
+  // ===== 副詞 Adverbs =====
+  { word: 'usually', pos: 'adv.', meaning: '通常' },
+  { word: 'sometimes', pos: 'adv.', meaning: '有時候' },
+  { word: 'always', pos: 'adv.', meaning: '總是' },
+  { word: 'rarely', pos: 'adv.', meaning: '很少' },
+  { word: 'quickly', pos: 'adv.', meaning: '快速地' },
+  { word: 'carefully', pos: 'adv.', meaning: '小心地' },
+  { word: 'easily', pos: 'adv.', meaning: '容易地' },
+  { word: 'clearly', pos: 'adv.', meaning: '清楚地' },
+
+  // ===== 片語動詞 Phrasal Verbs =====
+  { word: 'look for', pos: 'phr.', meaning: '尋找' },
+  { word: 'look after', pos: 'phr.', meaning: '照顧' },
+  { word: 'take off', pos: 'phr.', meaning: '起飛；脫掉' },
+  { word: 'turn on', pos: 'phr.', meaning: '打開（電源）' },
+  { word: 'turn off', pos: 'phr.', meaning: '關掉（電源）' },
+  { word: 'pick up', pos: 'phr.', meaning: '撿起；接送' },
+  { word: 'give up', pos: 'phr.', meaning: '放棄' },
+  { word: 'set up', pos: 'phr.', meaning: '建立；架設' },
+  // ===== Verbs (More) =====
+{ word: 'examine', pos: 'v.', meaning: '檢查、審視' },
+{ word: 'predict', pos: 'v.', meaning: '預測' },
+{ word: 'remind', pos: 'v.', meaning: '提醒' },
+{ word: 'encourage', pos: 'v.', meaning: '鼓勵' },
+{ word: 'communicate', pos: 'v.', meaning: '溝通' },
+{ word: 'express', pos: 'v.', meaning: '表達' },
+{ word: 'organize', pos: 'v.', meaning: '整理、組織' },
+{ word: 'prepare', pos: 'v.', meaning: '準備' },
+{ word: 'explain', pos: 'v.', meaning: '解釋' },
+{ word: 'measure', pos: 'v.', meaning: '測量' },
+{ word: 'protect', pos: 'v.', meaning: '保護' },
+{ word: 'reduce', pos: 'v.', meaning: '減少' },
+{ word: 'increase', pos: 'v.', meaning: '增加' },
+{ word: 'influence', pos: 'v.', meaning: '影響' },
+{ word: 'celebrate', pos: 'v.', meaning: '慶祝' },
+{ word: 'imagine', pos: 'v.', meaning: '想像' },
+{ word: 'remind', pos: 'v.', meaning: '提醒' },
+{ word: 'expose', pos: 'v.', meaning: '暴露、接觸' },
+
+// ===== Nouns (More) =====
+{ word: 'behavior', pos: 'n.', meaning: '行為' },
+{ word: 'culture', pos: 'n.', meaning: '文化' },
+{ word: 'tradition', pos: 'n.', meaning: '傳統' },
+{ word: 'community', pos: 'n.', meaning: '社區' },
+{ word: 'opportunity', pos: 'n.', meaning: '機會' },
+{ word: 'responsibility', pos: 'n.', meaning: '責任' },
+{ word: 'relationship', pos: 'n.', meaning: '關係' },
+{ word: 'transportation', pos: 'n.', meaning: '交通運輸' },
+{ word: 'pollution', pos: 'n.', meaning: '污染' },
+{ word: 'energy', pos: 'n.', meaning: '能源' },
+{ word: 'resource', pos: 'n.', meaning: '資源' },
+{ word: 'achievement', pos: 'n.', meaning: '成就' },
+{ word: 'challenge', pos: 'n.', meaning: '挑戰' },
+{ word: 'solution', pos: 'n.', meaning: '解決方案' },
+{ word: 'emotion', pos: 'n.', meaning: '情緒' },
+{ word: 'character', pos: 'n.', meaning: '性格；角色' },
+
+// ===== Adjectives (More) =====
+{ word: 'positive', pos: 'adj.', meaning: '正向的' },
+{ word: 'negative', pos: 'adj.', meaning: '負面的' },
+{ word: 'active', pos: 'adj.', meaning: '積極的' },
+{ word: 'passive', pos: 'adj.', meaning: '被動的' },
+{ word: 'global', pos: 'adj.', meaning: '全球的' },
+{ word: 'local', pos: 'adj.', meaning: '地方的' },
+{ word: 'environmental', pos: 'adj.', meaning: '環境的' },
+{ word: 'personal', pos: 'adj.', meaning: '個人的' },
+{ word: 'public', pos: 'adj.', meaning: '公共的' },
+{ word: 'private', pos: 'adj.', meaning: '私人的' },
+{ word: 'efficient', pos: 'adj.', meaning: '有效率的' },
+{ word: 'valuable', pos: 'adj.', meaning: '有價值的' },
+{ word: 'harmful', pos: 'adj.', meaning: '有害的' },
+{ word: 'peaceful', pos: 'adj.', meaning: '和平的' },
+
+// ===== Adverbs (More) =====
+{ word: 'gradually', pos: 'adv.', meaning: '逐漸地' },
+{ word: 'eventually', pos: 'adv.', meaning: '最終' },
+{ word: 'nearly', pos: 'adv.', meaning: '幾乎' },
+{ word: 'barely', pos: 'adv.', meaning: '勉強地；幾乎不' },
+{ word: 'highly', pos: 'adv.', meaning: '高度地' },
+{ word: 'properly', pos: 'adv.', meaning: '適當地' },
+
+// ===== Phrasal Verbs (More) =====
+{ word: 'carry out', pos: 'phr.', meaning: '執行' },
+{ word: 'figure out', pos: 'phr.', meaning: '理解、想出' },
+{ word: 'run into', pos: 'phr.', meaning: '遇到（困難）' },
+{ word: 'deal with', pos: 'phr.', meaning: '處理' },
+{ word: 'get along with', pos: 'phr.', meaning: '與…相處融洽' },
+{ word: 'look forward to', pos: 'phr.', meaning: '期待' },
+{ word: 'put off', pos: 'phr.', meaning: '延期' },
+{ word: 'work out', pos: 'phr.', meaning: '解決；健身' },
+
+// ===== Daily Life =====
+{ word: 'grocery', pos: 'n.', meaning: '雜貨、食品' },
+{ word: 'apartment', pos: 'n.', meaning: '公寓' },
+{ word: 'neighbor', pos: 'n.', meaning: '鄰居' },
+{ word: 'medicine', pos: 'n.', meaning: '藥物' },
+{ word: 'appointment', pos: 'n.', meaning: '預約' },
+
+// ===== School & Learning =====
+{ word: 'assignment', pos: 'n.', meaning: '作業' },
+{ word: 'presentation', pos: 'n.', meaning: '簡報' },
+{ word: 'experiment', pos: 'n.', meaning: '實驗' },
+{ word: 'lecture', pos: 'n.', meaning: '講課' },
+{ word: 'scholarship', pos: 'n.', meaning: '獎學金' },
+
+// ===== Technology & Society =====
+{ word: 'device', pos: 'n.', meaning: '裝置' },
+{ word: 'application', pos: 'n.', meaning: '應用程式' },
+{ word: 'network', pos: 'n.', meaning: '網路' },
+{ word: 'robot', pos: 'n.', meaning: '機器人' },
+{ word: 'innovation', pos: 'n.', meaning: '創新' },
+
+// ===== Emotion & Personality =====
+{ word: 'anxious', pos: 'adj.', meaning: '焦慮的' },
+{ word: 'curious', pos: 'adj.', meaning: '好奇的' },
+{ word: 'brave', pos: 'adj.', meaning: '勇敢的' },
+{ word: 'generous', pos: 'adj.', meaning: '慷慨的' },
+{ word: 'patient', pos: 'adj.', meaning: '有耐心的' }
+];
+
+
